@@ -21,7 +21,7 @@ mongoose.connect(process.env.CONNECTION_URL,({ useNewUrlParser: true },{ useUnif
 .then(()=> app.listen(PORT,()=>console.log(`server running on port : ${PORT}`)))
 .catch((err)=> console.log(` some error occured . Details are : ${err}`))
 
-app.use("/",router)
+app.use("/posts",router)
 
 app.get('/',(req,res)=>{
  res.send("Welcome to VS Diary API")
